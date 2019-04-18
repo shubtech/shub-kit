@@ -12,6 +12,6 @@ GO111MODULE=off go install github.com/shubtech/shub-kit/cmd/skit
 ```
 
 ## Usages
-* skit init `project_name`
-* skit add `service_name`
-* skit endpoint `endpoint_name` 
+[x] skit init `project_name`
+[x] skit add `service_name`
+[ ] skit endpoint `endpoint_name` 
