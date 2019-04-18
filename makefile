@@ -1,7 +1,7 @@
 .PHONY: build test install
 
 build:
-	go build -o bin/skit cmd/shub-kit/main.go
+	go build -o bin/skit cmd/skit/main.go
 
 test: 
 	go test ./...

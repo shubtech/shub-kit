@@ -2,10 +2,13 @@
 A tool generate service for microservice project.
 
 ## Install
-Run command with sudo mode `make install` to install skit
+Run below command with sudo mode to install skit
+```shell
+make install
+```
 <br>or<br>
 ```shell
-go install github.com/shubtech/shub-kit/cmd/shub-kit
+GO111MODULE=off go install github.com/shubtech/shub-kit/cmd/skit
 ```
 
 ## Usages

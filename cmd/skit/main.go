@@ -41,7 +41,11 @@ func usage() {
 		"to initial project structer\n\t",
 		color.DebugColor, "skit add service_name ",
 		color.NormalColor,
-		"add a service to microservice\n\n",
+		"add a service to microservice\n\t",
+		color.DebugColor,
+		"skit endpoint endpoint_name ",
+		color.NormalColor,
+		"add an endpoint to a service\n\n",
 		color.DebugColor,
 		"Happy Hacking!",
 	)
