@@ -49,5 +49,53 @@ func initGenFile(projectName string) error {
 	}
 	f.Close()
 
+	f, err = os.Create(projectName + "/docker-compose.yml")
+	if err != nil {
+		return err
+	}
+
+	f.WriteString(`version: "3.5"`)
+
+	f.Close()
+
+	f, err = os.Create(projectName + "/.gitignore")
+	if err != nil {
+		return err
+	}
+
+	f.WriteString(`**/.env
+**/bin
+# Created by https://www.gitignore.io/api/go,code
+# Edit at https://www.gitignore.io/?templates=go,code
+
+### Code ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### Go ###
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with "go test -c"
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+### Go Patch ###
+/vendor/
+/Godeps/
+
+# End of https://www.gitignore.io/api/go,code
+`)
+	f.Close()
+
 	return nil
 }
